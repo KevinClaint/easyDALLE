@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image</title>
+</head>
+<body>
+    <h1>Create Your Image</h1>
+    <form action="/get_response" method="post">
+        <label for="user_input">Enter your description:</label>
+        <input type="text" id="user_input" name="user_input">
+        <input type="submit" value="Send">
+    </form>
+    {% if image_path %}
+    <h3>Image Display</h3>
+    <img src="{{ image_path }}" alt="Example Image" width="512" height="512">
+    {% endif %}
+</body>
+</html>
